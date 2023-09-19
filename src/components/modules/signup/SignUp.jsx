@@ -65,7 +65,7 @@ export default function SignUp({ closeDialog, insideSignInModal }) {
     } else {
       return {
         ...userData,
-        date: "0" + userData.day + "/" + userData.month + "/" + userData.year,
+        date: userData.day + "/" + userData.month + "/" + userData.year,
       };
     }
   };

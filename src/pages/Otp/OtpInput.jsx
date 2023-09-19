@@ -14,27 +14,22 @@ function OtpInput() {
   };
 
   const handleSubmit = async () => {
-    console.log(modifiedUserData);
     setLoading(true);
     try {
-      const response = await axios.post(
-        "http://localhost:8080/api/user/verify-otp",
-        { otp, emailForOtp: localStorage.getItem(emailForOtp) }
-      );
-      console.log(response);
-      const resData = await response.data;
-      console.log(resData);
-      navigate("/otpInput");
+      const response = await fetch("http://localhost:8080/api/user/register", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          otp: "123456",
+          emailForOTP: "omisandefunmi@gmail.com",
+        }),
+      });
+      const data = await response.json();
+      console.log(data);
     } catch (error) {
-      if (error.response) {
-        if (error.response.status == 400) {
-          setOtpErrMsg(error.response.data);
-        }
-      } else if (error.request) {
-        console.log(error.request);
-      } else {
-        console.log("Error", error.message);
-      }
+      console.error("Error:", error);
     }
     setLoading(false);
   };
@@ -64,6 +59,7 @@ function OtpInput() {
                 placeholder="Enter OTP"
                 className="otp-input"
               />
+              <p>{otpErrMsg}</p>
               <div style={{ position: "relative" }}>
                 <button
                   type="button"
