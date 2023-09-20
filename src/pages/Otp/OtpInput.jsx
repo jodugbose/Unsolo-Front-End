@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./OtpInput.css";
 import { CircularProgress } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 function OtpInput() {
+  const navigate = useNavigate();
   const [otp, setOtp] = useState("");
   const [loading, setLoading] = useState(false);
   const [otpErrMsg, setOtpErrMsg] = useState("");
@@ -16,22 +18,28 @@ function OtpInput() {
   const handleSubmit = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8080/api/user/register", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          otp: "123456",
-          emailForOTP: "omisandefunmi@gmail.com",
-        }),
-      });
-      const data = await response.json();
-      console.log(data);
+      const response = await axios.post(
+        "http://localhost:8080/api/user/verify-otp",
+        { otp, emailForOTP: localStorage.getItem("emailForOTP") }
+      );
+      console.log(response);
+      const resData = await response.data;
+      console.log(resData);
+      localStorage.setItem("token", resData.token);
+      navigate("/", { state: { redirectedFromOtp: true } });
     } catch (error) {
-      console.error("Error:", error);
+      if (error.response) {
+        console.log(error.response);
+        if (error.response.status == 401) {
+          setOtpErrMsg(error.response.data);
+        }
+        if (error.response.status == 403) {
+          setOtpErrMsg(error.response.data);
+        }
+      } else {
+        console.log("Error", error);
+      }
     }
-    setLoading(false);
   };
   //style="max-width: 540px;"
 

@@ -82,10 +82,11 @@ export default function SignUp({ closeDialog, insideSignInModal }) {
       console.log(response);
       const resData = await response.data;
       console.log(resData);
-      localStorage.setItem("emailForOtp", resData.email);
+      localStorage.setItem("emailForOTP", resData.email);
       navigate("/otpInput");
     } catch (error) {
       if (error.response) {
+        console.log(error.response);
         // The request was made and the server responded with a status code
         // that falls out of the range of 2xx
         if (error.response.status == 400) {

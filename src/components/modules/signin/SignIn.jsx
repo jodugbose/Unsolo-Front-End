@@ -17,8 +17,10 @@ import {
 import MyButton from "../../ui/MyButton";
 import SignUpDialog from "../signup/SignUpDialog";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn({ closeModal, insideSignUpDialog }) {
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [passwordErrMsg, setPasswordErrMsg] = useState("");
   const [emailErrMsg, setEmailErrMsg] = useState("");
@@ -49,15 +51,13 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
       navigate("/dashboard");
     } catch (error) {
       if (error.response) {
-        console.log(error.response)
+        console.log(error.response);
         if (error.response.status == 401) {
           setEmailErrMsg(error.response.data);
         }
         if (error.response.status == 403) {
           setEmailErrMsg(error.response.data);
         }
-      } else if (error.request) {
-        console.log(error.request);
       } else {
         console.log("Error", error);
       }

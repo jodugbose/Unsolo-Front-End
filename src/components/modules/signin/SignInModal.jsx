@@ -1,5 +1,5 @@
 import { Box, Button, Modal, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SignIn from "./SignIn";
 
 const style = {
@@ -10,10 +10,21 @@ const style = {
   boxShadow: 24,
 };
 
-export default function SignInModal({ children, insideSignUpDialog }) {
+export default function SignInModal({ children, insideSignUpDialog, rdFO }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  useEffect(() => {
+    if (rdFO) {
+      let timer = setTimeout(() => {
+        setOpen(rdFO);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <>
       {insideSignUpDialog ? (

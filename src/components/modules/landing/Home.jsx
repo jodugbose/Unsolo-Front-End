@@ -3,7 +3,7 @@ import MyButton from "../../ui/MyButton";
 import SignInModal from "../signin/SignInModal";
 import SignUpDialog from "../signup/SignUpDialog";
 
-export default function Home() {
+export default function Home( {rdFO}) {
   return (
     <Box
       sx={{
@@ -46,10 +46,9 @@ export default function Home() {
             Find your adventure with <br /> the perfect travel buddy
           </Typography>
 
-          <SignInModal>
+          <SignInModal rdFO={rdFO}>
             <MyButton color="white">Get Started</MyButton>
           </SignInModal>
-          <SignUpDialog />
         </Stack>
       </Stack>
       {/* </Box> */}
