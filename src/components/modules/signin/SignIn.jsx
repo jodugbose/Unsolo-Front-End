@@ -1,6 +1,7 @@
 import { useState } from "react";
 import {
   Box,
+  CircularProgress,
   IconButton,
   InputAdornment,
   Paper,
@@ -15,9 +16,14 @@ import {
 } from "@mui/icons-material";
 import MyButton from "../../ui/MyButton";
 import SignUpDialog from "../signup/SignUpDialog";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function SignIn({ closeModal, insideSignUpDialog }) {
-  const [myError, setMyError] = useState("error");
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [passwordErrMsg, setPasswordErrMsg] = useState("");
+  const [emailErrMsg, setEmailErrMsg] = useState("");
   const [userData, setUserData] = useState({
     email: "",
     password: "",
@@ -30,15 +36,33 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const submitSignInDetails = async () => {
+  const submitSignInDetails = async (e) => {
+    e.preventDefault();
+    setLoading(true);
     try {
-      const response = await axios.post("/", userData);
+      const response = await axios.post(
+        "http://localhost:8080/api/user/login",
+        userData
+      );
       console.log(response);
-      const fetchedUserData = await response.data;
-      console.log(fetchedUserData);
+      const resData = await response.data;
+      console.log(resData);
+      localStorage.setItem("token", resData.token);
+      navigate("/dashboard");
     } catch (error) {
-      console.error("Error: ", error);
+      if (error.response) {
+        console.log(error.response);
+        if (error.response.status == 401) {
+          setEmailErrMsg(error.response.data);
+        }
+        if (error.response.status == 403) {
+          setEmailErrMsg(error.response.data);
+        }
+      } else {
+        console.log("Error", error);
+      }
     }
+    // setLoading(false);
   };
 
   return (
@@ -71,7 +95,8 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
       </Box>
       <Box component="form" onSubmit={submitSignInDetails}>
         <TextField
-          error={false}
+          error={emailErrMsg ? true : false}
+          helperText={emailErrMsg}
           type="email"
           fullWidth
           size="small"
@@ -109,14 +134,28 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
             ),
           }}
         />
-        <MyButton
-          width="100%"
-          color="white"
-          mySubmit="submit"
-          myDisabled={false}
-        >
-          proceed
-        </MyButton>
+        <Box position="relative">
+          <MyButton
+            width="100%"
+            color="white"
+            mySubmit="submit"
+            myDisabled={loading}
+          >
+            proceed
+          </MyButton>
+          {loading && (
+            <CircularProgress
+              size={40}
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                marginTop: "-20px",
+                marginLeft: "-20px",
+              }}
+            />
+          )}
+        </Box>
       </Box>
       <Typography color="text.secondary" textAlign="center" py={2}>
         Don’t have an account?{" "}

@@ -12,15 +12,14 @@ import "./landing.css";
 import { useLocation } from "react-router-dom";
 
 export default function Landing() {
-  // const { state } = useLocation();
+  const { state } = useLocation();
+  console.log(state);
 
-  // useEffect()
-  // console.log(state);
   return (
     <>
       <Box>
-        <Nav yes={true} />
-        <Home />
+        <Nav />
+        <Home rdFO={state?.redirectedFromOtp}/>
         <Travel />
         <Explore />
         <About />

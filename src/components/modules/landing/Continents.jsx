@@ -2,7 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import MyButton from "../../ui/MyButton";
 import SignInModal from "../signin/SignInModal";
 
-export default function Continents() {
+export default function Continents({ redirectedFromOtp }) {
   return (
     <Stack
       sx={{
