@@ -1,9 +1,9 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Toolbar, Typography } from "@mui/material";
 import MyButton from "../../ui/MyButton";
 import SignInModal from "../signin/SignInModal";
 import SignUpDialog from "../signup/SignUpDialog";
 
-export default function Home( {rdFO}) {
+export default function Home({ rdFO }) {
   return (
     <Box
       sx={{

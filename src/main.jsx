@@ -5,12 +5,14 @@ import "bootstrap";
 import "bootstrap/scss/bootstrap.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import App from "./App.jsx";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import axios from "axios";
 import { BrowserRouter } from "react-router-dom";
 
 import * as bootstrap from "bootstrap";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import App from "./App.jsx";
 
 const myTheme = createTheme({
   palette: {
@@ -28,7 +30,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
         <CssBaseline />
-        <App />
+        <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <App />
+        </LocalizationProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>

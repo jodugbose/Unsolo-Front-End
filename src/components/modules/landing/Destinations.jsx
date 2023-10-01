@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/material";
+import Carousel from "react-material-ui-carousel";
 
 export default function Destinations() {
   return (
@@ -13,9 +14,14 @@ export default function Destinations() {
         >
           Meet travelers around the world.
         </Typography>
-        <Box p={4}>
-          <img src={"/frame4.png"} width="100%" />
-        </Box>
+        <Carousel>
+          <Box p={4}>
+            <img src={"/frame4.png"} width="100%" />
+          </Box>
+          <Box p={4}>
+            <img src={"/frame2.png"} width="100%" />
+          </Box>
+        </Carousel>
       </Container>
     </Box>
   );
