@@ -15,7 +15,7 @@ export default function Trip() {
           title="Create A Trip"
           subtitle="Invite fellow travellers that share your interests"
           url="http://localhost:8080/api/user/trip"
-          action='create'
+          action='create trip'
         >
           <MyButton>Invite Traveler</MyButton>
         </TripModal>

@@ -9,7 +9,9 @@ export default function MyButton({
   mySubmit,
   myDisabled,
   onClick,
-  href
+  href,
+  py,
+  fontSize,
 }) {
   return (
     <Button
@@ -20,9 +22,10 @@ export default function MyButton({
       variant={variant || "contained"}
       sx={{
         borderRadius: "2rem",
-        py: 1.5,
+        boxShadow: 'none',
+        py: `${py || 1.5}`,
         px: 3.5,
-        fontSize: "1rem",
+        fontSize: `${fontSize || "1rem"}`,
         textTransform: "capitalize",
         width,
         color,

@@ -20,7 +20,13 @@ import axios from "axios";
 console.log(dayjs("2018-08-08"));
 console.log(dayjs(new Date()));
 
-export default function BuddyForm({ title, subtitle, url, action, closeModal }) {
+export default function BuddyForm({
+  title,
+  subtitle,
+  url,
+  action,
+  closeModal,
+}) {
   const [loading, setLoading] = useState(false);
   const [destination, setDestination] = useState(null);
   const [departureDate, setDepartureDate] = useState(null);
@@ -36,11 +42,19 @@ export default function BuddyForm({ title, subtitle, url, action, closeModal }) 
     console.log(buddyData);
   };
 
+  const modifiedBuddyData = {
+    ...buddyData,
+    destination: destination?.label,
+    departureDate: departureDate?.format("DD/MM/YYYY"),
+    arrivalDate: arrivalDate?.format("DD/MM/YYYY"),
+  };
+
   const submitBuddyData = async (e) => {
     e.preventDefault();
     setLoading(true);
+    console.log(modifiedBuddyData);
     try {
-      const response = await axios.post(url, buddyData);
+      const response = await axios.post(url, modifiedBuddyData);
       console.log(response);
       const resData = await response.data;
       console.log(resData);
@@ -88,7 +102,6 @@ export default function BuddyForm({ title, subtitle, url, action, closeModal }) 
           value={destination}
           onChange={(event, newValue) => {
             setDestination(newValue);
-            console.log(destination?.label);
           }}
           autoHighlight
           getOptionLabel={(option) => option.label}
@@ -128,7 +141,6 @@ export default function BuddyForm({ title, subtitle, url, action, closeModal }) 
               value={departureDate}
               onChange={(newValue) => {
                 setDepartureDate(newValue);
-                console.log(departureDate?.format("DD/MM/YYYY"));
               }}
               slots={{ openPickerIcon: FlightTakeoff }}
               slotProps={{
@@ -149,7 +161,6 @@ export default function BuddyForm({ title, subtitle, url, action, closeModal }) 
               value={arrivalDate}
               onChange={(newValue) => {
                 setArrivalDate(newValue);
-                console.log(arrivalDate?.format("DD/MM/YYYY"));
               }}
               slots={{ openPickerIcon: FlightLand }}
               slotProps={{
