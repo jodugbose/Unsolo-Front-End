@@ -11,24 +11,21 @@ import Flight from "./pages/Flight";
 import Hotel from "./pages/Hotel";
 import Layout from "./components/modules/layout/Layout";
 
-
 function App() {
   return (
     <>
       <Routes>
-      <Route path='/' element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
-          <Route path="/otpInput" element={<OtpInput />} />
-          <Route path="/dashboard" element={<DashBoard />} />
-          {/* <Route path="/signInPage" element={<SignInPage />} />
-          <Route path="/signUpPage" element={<SignUpPage />} /> */}
-          <Route path="/buddy" element={<Buddy />} />
-        <Route path="/trip" element={<Trip />} />
-                <Route path="/booking" element={<Booking />}>
-          <Route path="flight" element={<Flight />} />
-          <Route path="hotel" element={<Hotel />} />
-        </Route>
-          <Route path="/testing" element={<Testing />} />
+          <Route path="otpInput" element={<OtpInput />} />
+          <Route path="dashboard" element={<DashBoard />} />
+          <Route path="buddy" element={<Buddy />} />
+          <Route path="trip" element={<Trip />} />
+          <Route path="booking" element={<Booking />}>
+            <Route path="flight" element={<Flight />} />
+            <Route path="hotel" element={<Hotel />} />
+          </Route>
+          <Route path="testing" element={<Testing />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
