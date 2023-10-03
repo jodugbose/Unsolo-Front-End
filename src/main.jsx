@@ -11,6 +11,7 @@ import axios from "axios";
 import { BrowserRouter } from "react-router-dom";
 
 import * as bootstrap from "bootstrap";
+import { ChatProvider } from "./context/chatContext.jsx";
 
 const myTheme = createTheme({
   palette: {
@@ -27,8 +28,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
-        <CssBaseline />
-        <App />
+        <ChatProvider>
+
+          <CssBaseline />
+          <App />
+        </ChatProvider>
       </ThemeProvider>
     </BrowserRouter>
   </React.StrictMode>
