@@ -52,17 +52,17 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
     } catch (error) {
       if (error.response) {
         console.log(error.response);
-        if (error.response.status == 401) {
+        if (error.response.status == 404) {
           setEmailErrMsg(error.response.data);
         }
         if (error.response.status == 403) {
-          setEmailErrMsg(error.response.data);
+          setPasswordErrMsg("Password Incorrect!!!   Try Again.");
         }
       } else {
         console.log("Error", error);
       }
     }
-    // setLoading(false);
+    setLoading(false);
   };
 
   return (
@@ -75,8 +75,8 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
         <IconButton sx={{ opacity: 0, cursor: "default" }}>
           <Close />
         </IconButton>
-        <Box>
-          <img src="/unsolo-icon.png" alt="unsolo-icon" />
+        <Box width="4rem">
+          <img width="100%" src="/unsolo-icon.svg" alt="unsolo-icon" />
         </Box>
         <IconButton
           onClick={() => {
@@ -107,6 +107,8 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
           onChange={handleChange}
         />
         <TextField
+          error={passwordErrMsg ? true : false}
+          helperText={passwordErrMsg}
           type={showPassword ? "text" : "password"}
           fullWidth
           sx={{ my: 2 }}

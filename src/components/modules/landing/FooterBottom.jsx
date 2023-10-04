@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from "@mui/material";
+import { Box, Divider, IconButton, Stack, Typography } from "@mui/material";
 import {
   FacebookRounded,
   Instagram,
@@ -6,12 +6,11 @@ import {
   LinkedIn,
 } from "@mui/icons-material";
 import MyButton from "../../ui/MyButton";
-import SignInModal from "../signin/SignInModal";
 import SignUpDialog from "../signup/SignUpDialog";
 
 export default function FooterBottom() {
   return (
-    <Box id="contact" p={4} px="8" textTransform={"uppercase"}>
+    <Box id="contact" px={2} textTransform="uppercase">
       <Stack
         direction={"row"}
         justifyContent={"space-between"}
@@ -27,20 +26,29 @@ export default function FooterBottom() {
       <Typography
         width="100%"
         variant="h2"
-        fontSize="5.3vw"
+        fontSize="5.4vw"
         textAlign="justify"
         fontWeight="400"
+        borderBottom="1px solid "
       >
         travel the world with friends
       </Typography>
-      <Divider />
-      <Stack direction={"row"} justifyContent={"space-between"} py={4}>
+      {/* <Divider sx={{ height: "2px", color: "red" }} /> */}
+      <Stack direction="row" justifyContent="space-between" py={2}>
         <Typography>tRAVBUD</Typography>
-        <Stack direction={"row"} spacing={2}>
-          <Twitter />
-          <FacebookRounded />
-          <LinkedIn />
-          <Instagram />
+        <Stack direction="row" spacing={2} mt={-1}>
+          <IconButton>
+            <Twitter />
+          </IconButton>
+          <IconButton>
+            <FacebookRounded />
+          </IconButton>
+          <IconButton>
+            <LinkedIn />
+          </IconButton>
+          <IconButton>
+            <Instagram />
+          </IconButton>
         </Stack>
         <Typography> LAgos, Nigeria 09:00</Typography>
       </Stack>

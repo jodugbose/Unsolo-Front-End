@@ -9,8 +9,12 @@ export default function MyButton({
   mySubmit,
   myDisabled,
   onClick,
-  href
+  href,
+  py,
+  px,
+  fontSize,
 }) {
+  const myPy = py || 1.5;
   return (
     <Button
       href={href}
@@ -20,9 +24,10 @@ export default function MyButton({
       variant={variant || "contained"}
       sx={{
         borderRadius: "2rem",
-        py: 1.5,
-        px: 3.5,
-        fontSize: "1rem",
+        boxShadow: "none",
+        py: myPy,
+        px: Number(`${px || 3.5}`),
+        fontSize: `${fontSize || "1rem"}`,
         textTransform: "capitalize",
         width,
         color,

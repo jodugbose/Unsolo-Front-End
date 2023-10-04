@@ -8,6 +8,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   boxShadow: 24,
+  borderRadius: "1rem",
 };
 
 export default function SignInModal({ children, insideSignUpDialog, rdFO }) {
@@ -19,7 +20,7 @@ export default function SignInModal({ children, insideSignUpDialog, rdFO }) {
     if (rdFO) {
       let timer = setTimeout(() => {
         setOpen(rdFO);
-      }, 2000);
+      }, 1000);
 
       return () => clearTimeout(timer);
     }
@@ -33,7 +34,10 @@ export default function SignInModal({ children, insideSignUpDialog, rdFO }) {
         <div onClick={handleOpen}>{children}</div>
       )}
 
-      <Modal open={open} onClose={handleClose}>
+      <Modal
+        open={open}
+        // onClose={handleClose}
+      >
         <Box sx={{ ...style }}>
           <SignIn
             closeModal={setOpen}

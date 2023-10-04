@@ -26,7 +26,7 @@ function OtpInput() {
       const resData = await response.data;
       console.log(resData);
       localStorage.setItem("token", resData.token);
-      navigate("/", { state: { redirectedFromOtp: true } });
+      navigate("/", { replace: true, state: { redirectedFromOtp: true } });
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -40,6 +40,7 @@ function OtpInput() {
         console.log("Error", error);
       }
     }
+    setLoading(false);
   };
   //style="max-width: 540px;"
 
