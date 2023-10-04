@@ -4,7 +4,7 @@ import MyButton from "../../ui/MyButton";
 
 export default function FlightForm() {
   return (
-    <Box bgcolor="#101828" borderRadius="0.5rem" p={4}>
+    <Box bgcolor="#101828" borderRadius="0.5rem" p={3}>
       <Stack direction="row" color="#fff">
         <Stack direction="row">
           <ConnectingAirports />

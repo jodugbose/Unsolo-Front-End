@@ -2,19 +2,17 @@ import { Avatar, Box, Paper, Stack, Typography } from "@mui/material";
 import MyButton from "../../ui/MyButton";
 import { Flight, RadioButtonChecked, TripOrigin } from "@mui/icons-material";
 
-export default function ReCard() {
+export default function FlightRemCard({img, from, to, price}) {
   return (
     <Paper
       variant="outlined"
       sx={{
         p: 2,
-        mr: 2,
+        mr: 3,
         "&:hover": {
           boxShadow:
-            "0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12)",
-          // transform: "translate(0px, 10px)",
-          // transform: "scale(1.02)",
-          transform: "matrix(1.02, 0, 0, 1.02, 0, 5)",
+            "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+          transform: "matrix(1.02, 0, 0, 1.02, 0, -5)",
         },
         transition: "0.5s",
       }}
@@ -30,7 +28,7 @@ export default function ReCard() {
         >
           <Avatar
             alt="flight boooking"
-            src="/flight1.svg"
+            src={img}
             sx={{
               width: "24rem",
               height: "16rem",
@@ -60,12 +58,12 @@ export default function ReCard() {
               <Stack>
                 <Stack direction="row" alignItems="center" spacing={1.5}>
                   <RadioButtonChecked fontSize="10px" />
-                  <Typography fontWeight={600}>Lagos</Typography>
+                  <Typography fontWeight={600}>{from}</Typography>
                 </Stack>
                 <Flight fontSize="10px" sx={{ transform: "rotate(180deg)" }} />
                 <Stack direction="row" alignItems="center" spacing={1.5}>
                   <TripOrigin fontSize="10px" />
-                  <Typography fontWeight={600}>London</Typography>
+                  <Typography fontWeight={600}>{to}</Typography>
                 </Stack>
               </Stack>
               <Typography
@@ -82,7 +80,7 @@ export default function ReCard() {
             </Stack>
             <Box pt={10}>
               <Typography fontWeight={700} fontSize="34px">
-                ₦782,573
+                ₦ {price}
               </Typography>
               <Typography fontSize="10px" mt={-1}>
                 Sun, Sep 17, 2023 - Mon, Sep 25, 2023

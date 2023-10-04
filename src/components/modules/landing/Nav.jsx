@@ -109,7 +109,7 @@ export default function Nav() {
         <Fab
           size="large"
           color="primary"
-          sx={{ bgcolor: "rgba(243, 172, 84, 0.3)" }}
+          sx={{ bgcolor: "rgba(243, 172, 84, 0.1)" }}
         >
           <KeyboardArrowUp fontSize="large" />
         </Fab>

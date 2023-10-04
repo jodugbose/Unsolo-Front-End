@@ -11,8 +11,10 @@ export default function MyButton({
   onClick,
   href,
   py,
+  px,
   fontSize,
 }) {
+  const myPy = py || 1.5;
   return (
     <Button
       href={href}
@@ -22,9 +24,9 @@ export default function MyButton({
       variant={variant || "contained"}
       sx={{
         borderRadius: "2rem",
-        boxShadow: 'none',
-        py: `${py || 1.5}`,
-        px: 3.5,
+        boxShadow: "none",
+        py: myPy,
+        px: Number(`${px || 3.5}`),
         fontSize: `${fontSize || "1rem"}`,
         textTransform: "capitalize",
         width,
