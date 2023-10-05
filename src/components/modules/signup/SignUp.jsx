@@ -132,8 +132,8 @@ export default function SignUp({ closeDialog, insideSignInModal }) {
         <IconButton sx={{ opacity: 0, cursor: "default" }}>
           <Close />
         </IconButton>
-        <Box>
-          <img src="/unsolo-icon.png" alt="unsolo-icon" />
+        <Box width="4rem">
+          <img width="100%" src="/unsolo-icon.svg" alt="unsolo-icon" />
         </Box>
         {closeDialog ? (
           <IconButton onClick={() => closeDialog(false)} sx={{ mt: -1 }}>
@@ -258,7 +258,6 @@ export default function SignUp({ closeDialog, insideSignInModal }) {
           >
             <MenuItem value={"male"}>Male</MenuItem>
             <MenuItem value={"female"}>Female</MenuItem>
-            <MenuItem value={"n/a"}>N/A</MenuItem>
           </TextField>
           <TextField
             error={passwordErrMsg ? true : false}

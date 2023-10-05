@@ -13,13 +13,11 @@ import { useLocation } from "react-router-dom";
 
 export default function Landing() {
   const { state } = useLocation();
-  console.log(state);
-
   return (
     <>
       <Box>
         <Nav />
-        <Home rdFO={state?.redirectedFromOtp}/>
+        <Home rdFO={state?.redirectedFromOtp} />
         <Travel />
         <Explore />
         <About />

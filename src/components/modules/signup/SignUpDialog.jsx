@@ -7,7 +7,6 @@ export default function SignUpDialog({ children, insideSignInModal }) {
 
   const handleClickOpen = () => {
     setOpen(true);
-    // closeSignInModal(false);
   };
 
   const handleClose = () => {
@@ -17,7 +16,9 @@ export default function SignUpDialog({ children, insideSignInModal }) {
   return (
     <>
       <span onClick={handleClickOpen}>{children}</span>
-      <Dialog open={open} onClose={handleClose} scroll="body">
+      <Dialog open={open} 
+      // onClose={handleClose} 
+      scroll="body">
         <SignUp closeDialog={setOpen} insideSignInModal={insideSignInModal} />
       </Dialog>
     </>

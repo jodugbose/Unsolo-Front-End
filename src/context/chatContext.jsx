@@ -1,11 +1,11 @@
 import { createContext, useEffect, useState } from "react";
-import Stomp from 'stompjs';
+import Stomp from "stompjs";
 import { templates } from "../components/modules/bot/data";
 
-const ChatContext = createContext()
+const ChatContext = createContext();
 
-var stompClient = null
-const URL = 'http://localhost:8080/ws'
+var stompClient = null;
+const URL = "http://localhost:8080/ws";
 
 const ChatProvider = ({ children }) => {
     const [username, setUsername] = useState()
