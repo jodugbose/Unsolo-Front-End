@@ -26,8 +26,8 @@ export default function Flight() {
       />
       <Box height="27rem">
         <Slider {...settings}>
-          {flightDetails.map((flightDetail) => (
-            <Box py={2}>
+          {flightDetails.map((flightDetail, i) => (
+            <Box py={2} key={i}>
               <FlightRemCard {...flightDetail} />
             </Box>
           ))}

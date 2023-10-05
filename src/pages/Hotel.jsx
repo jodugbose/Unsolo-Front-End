@@ -16,7 +16,7 @@ const settings = {
 };
 export default function Hotel() {
   return (
-    <>
+    <Box bgcolor="rgba(243, 172, 84, 0.05)">
       <Box py={5} pr={2}>
         <HotelForm />
       </Box>
@@ -26,14 +26,14 @@ export default function Hotel() {
       />
       <Box overflow="hidden" height="27rem">
         <Slider {...settings}>
-          {hotelDetails.map((hotelDetail) => (
-            <Box py={2}>
+          {hotelDetails.map((hotelDetail, i) => (
+            <Box py={2} key={i}>
               <HotelRemCard {...hotelDetail} />
             </Box>
           ))}
         </Slider>
       </Box>
-    </>
+    </Box>
   );
 }
 const hotelDetails = [
@@ -62,7 +62,8 @@ const hotelDetails = [
     name: "Abuja",
     location: "Santorini",
     price: "78,780",
-  },{
+  },
+  {
     img: "/hotel7.jpg",
     name: "Abuja",
     location: "Santorini",

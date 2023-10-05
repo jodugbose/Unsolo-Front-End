@@ -10,6 +10,7 @@ import Flight from "./pages/Flight";
 import Hotel from "./pages/Hotel";
 import Layout from "./components/modules/layout/Layout";
 import PersistentDrawerLeft from "./pages/DashBoard/PersistentDrawerLeft/PersistentDrawerLeft";
+import DashBoardWindow from "./pages/DashBoard/DashBoardWindow/DashBoardWindow";
 
 function App() {
   return (
@@ -18,13 +19,16 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Landing />} />
           <Route path="otpInput" element={<OtpInput />} />
-          <Route path="dashboard" element={<PersistentDrawerLeft />} />
-          <Route path="buddy" element={<Buddy />} />
-          <Route path="trip" element={<Trip />} />
-          <Route path="booking" element={<Booking />}>
-            <Route path="flight" element={<Flight />} />
-            <Route path="hotel" element={<Hotel />} />
+          <Route path="homepage" element={<PersistentDrawerLeft />}>
+            <Route path="dashboard" element={<DashBoardWindow />} />
+            <Route path="buddy" element={<Buddy />} />
+            <Route path="trip" element={<Trip />} />
+            <Route path="booking" element={<Booking />}>
+              <Route path="flight" element={<Flight />} />
+              <Route path="hotel" element={<Hotel />} />
+            </Route>
           </Route>
+
           <Route path="testing" element={<Testing />} />
           <Route path="*" element={<NotFound />} />
         </Route>
