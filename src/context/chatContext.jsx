@@ -16,7 +16,7 @@ const ChatProvider = ({ children }) => {
     useEffect(() => {
         connect()
     }, [])
-    
+
     function connect() {
         setUsername("Johnson")
 
@@ -51,11 +51,9 @@ const ChatProvider = ({ children }) => {
         if (username) {
             if (isConnected) {
                 console.log("FIRST IF")
-                stompClient.subscribe('/topic/public', onMessageReceived);
-
                 stompClient.send("/app/talktorobot",
                     {},
-                    JSON.stringify({ type:'CHAT', sender: username, message: message })
+                    JSON.stringify({ type: 'CHAT', sender: username, message: message })
                 )
             }
             else {
@@ -69,7 +67,7 @@ const ChatProvider = ({ children }) => {
 
                     stompClient.send("/app/talktorobot",
                         {},
-                        JSON.stringify({ type:'CHAT', sender: username, message: message })
+                        JSON.stringify({ type: 'CHAT', sender: username, message: message })
                     )
                 }, onError);
             }
@@ -90,22 +88,16 @@ const ChatProvider = ({ children }) => {
 
 
     function onMessageReceived(payload) {
-        var message = JSON.parse(payload.body);
-        console.log("payload: "+ JSON.stringify(message))
-
+        const message = JSON.parse(payload.body);
+        console.log("payload: " + JSON.stringify(message))
         messages.push(message)
         setMessages(messages)
-
     }
 
 
     return (
         <ChatContext.Provider value={{
-            stompClient,
             username,
-            connect,
-            onConnected,
-            onError,
             messages,
             setMessages,
             sendMessage,

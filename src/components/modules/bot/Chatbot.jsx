@@ -35,8 +35,11 @@ const Chatbot = () => {
   }
 
   const handleMessageItemClick = (message) => {
-    console.log(message)
-    sendMessage(message)
+    if(message === 'Explore Packages') {
+      console.log(message)
+      document.location.href='/#explore'
+    }
+    handleChatView()
   }
 
   return (
