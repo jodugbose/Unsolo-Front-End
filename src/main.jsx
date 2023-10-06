@@ -14,6 +14,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import App from "./App.jsx";
 import { ChatProvider } from "./context/chatContext.jsx";
+import { TripProvider } from "./context/tripContext.jsx";
 
 const myTheme = createTheme({
   palette: {
@@ -31,10 +32,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <ThemeProvider theme={myTheme}>
         <ChatProvider>
-          <CssBaseline />
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <App />
-          </LocalizationProvider>
+          <TripProvider>
+            <CssBaseline />
+            <LocalizationProvider dateAdapter={AdapterDayjs}>
+              <App />
+            </LocalizationProvider>
+          </TripProvider>
         </ChatProvider>
       </ThemeProvider>
     </BrowserRouter>

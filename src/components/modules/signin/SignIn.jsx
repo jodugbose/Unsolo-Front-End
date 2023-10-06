@@ -18,6 +18,9 @@ import MyButton from "../../ui/MyButton";
 import SignUpDialog from "../signup/SignUpDialog";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { decodeJwt } from "../../../roleUrlRouter";
+import useTrip from "../../../hooks/useTrip";
+
 
 export default function SignIn({ closeModal, insideSignUpDialog }) {
   const navigate = useNavigate();
@@ -28,6 +31,7 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
     email: "",
     password: "",
   });
+  const { GetUserProfile } = useTrip();
   const handleChange = (e) => {
     setUserData({ ...userData, [e.target.name]: e.target.value });
     console.log(userData);
@@ -35,6 +39,7 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
 
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const profileUrl = "http://localhost:8080/api/user/profile?email="
 
   const submitSignInDetails = async (e) => {
     e.preventDefault();
@@ -48,6 +53,10 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
       const resData = await response.data;
       console.log(resData);
       localStorage.setItem("token", resData.token);
+      const details = decodeJwt(resData.token)
+      console.log(details?.sub)
+      GetUserProfile(details?.sub)
+
       navigate("/dashboard");
     } catch (error) {
       if (error.response) {
@@ -64,6 +73,7 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
     }
     setLoading(false);
   };
+  
 
   return (
     <Paper sx={{ width: "30rem", p: 3, pb: 0, borderRadius: "1rem" }}>

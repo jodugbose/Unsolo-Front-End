@@ -38,6 +38,22 @@ const Chatbot = () => {
       console.log(message)
       document.location.href='/#explore'
     }
+    if(message === 'Hotel Booking'){
+      console.log(message)
+      document.location.href='/booking/hotel'
+    }
+    if(message === 'Trip Booking'){
+      console.log(message)
+      document.location.href='/trip'
+    }
+    if(message === 'Flight Booking'){
+      console.log(message)
+      document.location.href='/booking/flight'
+    }
+    if(message === 'Hotel Booking'){
+      console.log(message)
+      document.location.href='/booking/hotel'
+    }
     handleChatView()
   }
 

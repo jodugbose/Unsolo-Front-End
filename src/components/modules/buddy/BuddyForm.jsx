@@ -15,6 +15,7 @@ import { Close, FlightLand, FlightTakeoff } from "@mui/icons-material";
 import MyButton from "../../ui/MyButton";
 import countries from "../../../countries.json";
 import axios from "axios";
+import useTrip from "../../../hooks/useTrip";
 // import dayjs from "dayjs";
 
 console.log(dayjs("2018-08-08"));
@@ -27,24 +28,31 @@ export default function BuddyForm({
   action,
   closeModal,
 }) {
+  //useContext{}
+  const { travellerId, FetchTrips } = useTrip()
   const [loading, setLoading] = useState(false);
   const [destination, setDestination] = useState(null);
   const [departureDate, setDepartureDate] = useState(null);
   const [arrivalDate, setArrivalDate] = useState(null);
   const [buddyData, setBuddyData] = useState({
-    gender: "",
+    // gender: "",
     budget: "",
     splitCost: "",
     journeyType: "",
+    aboutTheTrip:"",
+    firstTime:"",
   });
+
   const handleChange = (e) => {
     setBuddyData({ ...buddyData, [e.target.name]: e.target.value });
-    console.log(buddyData);
+    // console.log(buddyData);
   };
+
 
   const modifiedBuddyData = {
     ...buddyData,
-    destination: destination?.label,
+    travellerId: travellerId,
+    country: destination?.label,
     departureDate: departureDate?.format("DD/MM/YYYY"),
     arrivalDate: arrivalDate?.format("DD/MM/YYYY"),
   };
@@ -58,6 +66,10 @@ export default function BuddyForm({
       console.log(response);
       const resData = await response.data;
       console.log(resData);
+      FetchTrips();
+      setBuddyData({})
+      // modifiedBuddyData = {}
+
     } catch (error) {
       if (error.response) {
         console.log(error.response);
@@ -188,6 +200,14 @@ export default function BuddyForm({
           ))}
         </TextField>
         <TextField
+          type="text"
+          label="About Trip"
+          name="aboutTheTrip"
+          value={buddyData.aboutTheTrip}
+          onChange={handleChange}
+        >
+        </TextField>
+        {/* <TextField
           fullWidth
           select
           size="small"
@@ -198,7 +218,7 @@ export default function BuddyForm({
         >
           <MenuItem value="male">Male</MenuItem>
           <MenuItem value="female">Female</MenuItem>
-        </TextField>
+        </TextField> */}
         <Stack direction="row" spacing={2}>
           <TextField
             fullWidth
@@ -217,6 +237,18 @@ export default function BuddyForm({
             label="Split Cost?"
             name="splitCost"
             value={buddyData.splitCost}
+            onChange={handleChange}
+          >
+            <MenuItem value={true}>Yes</MenuItem>
+            <MenuItem value={false}>No</MenuItem>
+          </TextField>
+          <TextField
+            fullWidth
+            select
+            size="small"
+            label="First Time?"
+            name="firstTime"
+            value={buddyData.firstTime}
             onChange={handleChange}
           >
             <MenuItem value={true}>Yes</MenuItem>

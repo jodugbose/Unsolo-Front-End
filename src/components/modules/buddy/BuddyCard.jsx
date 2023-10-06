@@ -21,7 +21,21 @@ function Item({ icon, name, value }) {
   );
 }
 
-export default function BuddyCard() {
+export default function BuddyCard({trip, index, name}) {
+  const { aboutTheTrip,
+    arrivalDate,
+    budget,
+    country,
+    departureDate,
+    firstTime,
+    id,
+    journeyType,
+    splitCost,
+    travellerId,
+  } = trip
+
+  console.log("Trips", aboutTheTrip)
+
   return (
     <Stack
       direction="row"
@@ -39,40 +53,39 @@ export default function BuddyCard() {
       <Stack>
         <Stack direction="row" alignItems="center">
           <Typography fontWeight={500} fontSize="140%" width="13rem">
-            Demi Wikinson, 26
+            { name }
           </Typography>
           <Stack direction="row" spacing={1}>
             <ExploreOutlined />
-            <Typography fontSize="100%">Male, Maldives</Typography>
+            <Typography fontSize="100%">{country}</Typography>
           </Stack>
         </Stack>
 
         <Typography width="25rem" color="text.disabled" fontSize="80%" py={1}>
-          I love little adventures and I tagged the trip name Mahjong. Looking
-          to have fun all round.
+          {aboutTheTrip}
         </Typography>
 
         <Stack direction="row" flexWrap="wrap" width="26rem">
-          <Item
+          {/* <Item
             icon={<AccountCircleOutlined color="primary" sx={{ mr: 0.5 }} />}
             name="Looking For"
             value="FEMALE"
-          />
+          /> */}
 
           <Item
             icon={<LabelOutlined color="primary" sx={{ mr: 0.5 }} />}
             name="Type of Journey"
-            value="Backpack"
+            value={`${splitCost ? "Yes" : "No"}`}
           />
           <Item
             icon={<PaymentsOutlined color="primary" sx={{ mr: 0.5 }} />}
             name="Split cost"
-            value="Yes"
+            value={`${splitCost ? "Yes" : "No"}`}
           />
           <Item
             icon={<ReceiptLongOutlined color="primary" sx={{ mr: 0.5 }} />}
             name="Budget"
-            value="$1000"
+            value={`$${budget}`}
           />
         </Stack>
       </Stack>
