@@ -2,7 +2,7 @@ import { Avatar, Box, Paper, Stack, Typography } from "@mui/material";
 import MyButton from "../../ui/MyButton";
 import { Flight, RadioButtonChecked, TripOrigin } from "@mui/icons-material";
 
-export default function FlightRemCard({img, from, to, price}) {
+export default function FlightRemCard({ img, from, to, price }) {
   return (
     <Paper
       variant="outlined"
@@ -12,7 +12,7 @@ export default function FlightRemCard({img, from, to, price}) {
         "&:hover": {
           boxShadow:
             "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-          transform: "matrix(1.02, 0, 0, 1.02, 0, -5)",
+          transform: "matrix(1.04, 0, 0, 1.04, 0, -7)",
         },
         transition: "0.5s",
       }}
@@ -30,8 +30,8 @@ export default function FlightRemCard({img, from, to, price}) {
             alt="flight boooking"
             src={img}
             sx={{
-              width: "24rem",
-              height: "16rem",
+              width: "21rem",
+              height: "14rem",
               borderRadius: "0.4rem",
             }}
           />

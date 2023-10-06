@@ -71,17 +71,17 @@ export default function FlightForm() {
         <Stack direction="row" width="50%" spacing={2}>
           <Stack
             direction="row"
-            width="32%"
+            width="30%"
             bgcolor="#fff"
             borderRadius="1rem"
           ></Stack>
           <Stack
             direction="row"
-            width="32%"
+            width="30%"
             bgcolor="#fff"
             borderRadius="1rem"
           ></Stack>
-          <MyButton color="#fff">search flights</MyButton>
+          <MyButton color="#fff" px={2}>search flights</MyButton>
         </Stack>
       </Stack>
     </Box>
