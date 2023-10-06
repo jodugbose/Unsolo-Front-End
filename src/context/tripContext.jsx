@@ -4,7 +4,6 @@ import { createContext, useEffect, useState } from "react";
 const TripContext = createContext()
 
 const URL = "http://localhost:8080/api/trip/"
-const userURL = "http://localhost:8080/api/user/register"
 const profileUrl = "http://localhost:8080/api/user/profile?email="
 const TripProvider = ({ children }) => {
     const [trips, setTrips] = useState([])

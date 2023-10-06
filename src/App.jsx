@@ -28,7 +28,6 @@ function App() {
               <Route path="hotel" element={<Hotel />} />
             </Route>
           </Route>
-
           <Route path="testing" element={<Testing />} />
           <Route path="*" element={<NotFound />} />
         </Route>
