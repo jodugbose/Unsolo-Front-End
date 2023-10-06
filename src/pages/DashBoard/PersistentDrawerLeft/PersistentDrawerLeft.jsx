@@ -30,7 +30,7 @@ import BestDestinations from '../BestDestinations/BestDestinations';
 import DashBoardWindow from '../DashBoardWindow/DashBoardWindow';
 import { Outlet } from 'react-router-dom';
 
-const drawerWidth = 240;
+const drawerWidth = 250;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme, open }) => ({

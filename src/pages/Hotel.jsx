@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import Header from "../components/modules/buddy/Header";
 import HotelRemCard from "../components/modules/booking/HotelRemCard";
 import Slider from "react-slick";
@@ -24,14 +24,16 @@ export default function Hotel() {
         title="Hotels around your destination"
         subtitle="Make lodging bookings that suit your destination"
       />
-      <Box overflow="hidden" height="27rem">
-        <Slider {...settings}>
-          {hotelDetails.map((hotelDetail, i) => (
-            <Box py={2} key={i}>
-              <HotelRemCard {...hotelDetail} />
-            </Box>
-          ))}
-        </Slider>
+      <Box height="27rem">
+        {/* <Stack direction="row"> */}
+          <Slider {...settings}>
+            {hotelDetails.map((hotelDetail, i) => (
+              <Box py={2} key={i}>
+                <HotelRemCard {...hotelDetail} />
+              </Box>
+            ))}
+          </Slider>
+        {/* </Stack> */}
       </Box>
     </Box>
   );

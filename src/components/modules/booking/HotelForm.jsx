@@ -24,7 +24,7 @@ export default function FlightForm() {
         <Stack direction="row" width="50%" justifyContent="space-between">
           <Stack
             direction="row"
-            width="55%"
+            width="50%"
             bgcolor="#fff"
             borderRadius="1rem"
           ></Stack>
