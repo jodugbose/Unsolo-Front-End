@@ -28,6 +28,7 @@ import ActivityFeed from '../ActivityFeed/ActivityFeed';
 import Banner from '../Banner/Banner';
 import BestDestinations from '../BestDestinations/BestDestinations';
 import DashBoardWindow from '../DashBoardWindow/DashBoardWindow';
+import { Outlet } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -152,7 +153,8 @@ export default function PersistentDrawerLeft() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <DashBoardWindow />
+        <Outlet/>
+        {/* <DashBoardWindow /> */}
       </Main>
     </Box>
   );
