@@ -87,9 +87,11 @@ export default function Nav() {
               </Typography>
             </Stack>
             <Stack direction="row">
-              <MyButton variant="text" fontWeight={700}>
-                Home
-              </MyButton>
+              <Link to="/homepage/dashboard">
+                <MyButton variant="text" fontWeight={700}>
+                  dashboard
+                </MyButton>
+              </Link>
 
               <MyButton href="/#explore" variant="text" fontWeight={700}>
                 Explore
