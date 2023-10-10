@@ -13,7 +13,7 @@ const TripProvider = ({ children }) => {
     const [travellerId, setTravellerId ]= useState(localStorage.getItem("travellerId"))
     const [email, setEmail] = useState("")
     const [buddies, setBuddies] = useState([])
-    const[displayName, setDisplayName] = useState(localStorage.getItem('name'))
+    const[displayName, setDisplayName] = useState(localStorage.getItem("name"))
     const[description, setDescription] = useState("")
     
     
@@ -33,7 +33,7 @@ const TripProvider = ({ children }) => {
         axios.get(PROFILE_URL+email)
         .then(response => {
           const data = response.data
-          localStorage.setItem("name", `${data?.firstName} ${data?.lastName}`)
+          localStorage.setItem("name", `${data?.firstname} ${data?.lastname}`)
           localStorage.setItem("travellerId", data?.id)
           setDescription(data?.description)
           setTravellerId(data?.id)

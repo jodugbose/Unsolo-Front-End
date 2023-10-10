@@ -15,6 +15,8 @@ function Profile() {
     setName(localStorage.getItem("name"));
     getLocation();
   },[])
+const userFirstName = localStorage.getItem("firstName")
+const userLastName = localStorage.getItem("lastName")
 
   return (
     <div>
@@ -25,8 +27,9 @@ function Profile() {
           sx={{ width: 80, height: 80 }}
         />
       </div >
-      <div className='d-flex justify-content-center mt-2'>
-      <h3>{ name }</h3>
+      <div className='d-flex gap-2 justify-content-center mt-2'>
+      <h3>{userFirstName}</h3>
+      <h3>{userLastName}</h3>
       </div>
       <div className='d-flex justify-content-center text-center'>
         <p>{ description }</p>

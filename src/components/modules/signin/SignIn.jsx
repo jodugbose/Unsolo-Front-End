@@ -52,6 +52,8 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
       console.log("Response",response);
       const resData = await response.data;
       console.log("Data",resData);
+      localStorage.setItem("firstName", resData.firstname)
+      localStorage.setItem("lastName", resData.lastname)
       localStorage.setItem("token", resData.token);
       const details = decodeJwt(resData.token)
       console.log(details?.sub)

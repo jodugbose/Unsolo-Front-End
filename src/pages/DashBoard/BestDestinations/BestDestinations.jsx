@@ -301,7 +301,7 @@ function BestDestinations() {
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
-                        <span>
+                        {/* <span>
                           <Avatar
                             alt="Remy Sharp"
                             src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAJ96UFwQrL_uBFjF_IJZtERvk8Xx7vWVUCKSRencg5vKCbmHqV_4Y6nwONoyusREPjN2LN8ep-Ga9nDMbue2TSf1W8Rg=s1600"
@@ -314,7 +314,7 @@ function BestDestinations() {
                             src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaADaWqoPRm7zfGJrtZbJ4zP0phtS6OAreyduKnq6F3EcXEy_lFAYSslJAz1P2adNIjbb2XtudhZ2zwqq5iEtr7b0xKZAQ=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
-                        </span>
+                        </span> */}
                       </div>
 
                       <div>
