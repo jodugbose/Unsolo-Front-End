@@ -10,7 +10,7 @@ function Profile() {
       <div className='d-flex justify-content-center'>
         <Avatar
           alt="Remy Sharp"
-          src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+          src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaANOO0M3rtyLlEk-Fww6wsm8jGh2UaJxsCvGFdB0OmUdUg8opKXKpL42JoTgK2_EFk6lndwacH4DH28COEateNvD4_l2Q=s2560"
           sx={{ width: 80, height: 80 }}
         />
       </div >

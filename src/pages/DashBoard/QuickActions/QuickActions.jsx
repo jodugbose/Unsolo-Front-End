@@ -20,12 +20,14 @@ function QuickActions() {
                     <i className="fa-regular fa-calendar fa-xl mt-4" style={{ color: '#aaaab6' }}></i>
                   </div>
                   <div className='col-9'>
-                    <div className='ms-1'>
-                      <h5 className='lh-1 fw-bold'>
-                        Book a Hotel
-                      </h5>
-                      <p className='lh-1 fw-light'>Conducive place for your tours</p>
-                    </div>
+                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="booking/hotel">
+                      <div className='ms-1'>
+                        <h5 className='lh-1 fw-bold'>
+                          Book a Hotel
+                        </h5>
+                        <p className='lh-1 fw-light'>Conducive place for your tours</p>
+                      </div>
+                    </a>
                   </div>
                   <div className='col-2'></div>
                 </div>
@@ -36,12 +38,14 @@ function QuickActions() {
                     <i className="fa-solid fa-plane-up fa-xl mt-4" style={{ color: '#aaaab6' }}></i>
                   </div>
                   <div className='col-9'>
-                    <div className='ms-1'>
-                      <h5 className='lh-1 fw-bold'>
-                        Request a Fligt
-                      </h5>
-                      <p className='lh-1 fw-light'>Fly to anywhere around the world</p>
-                    </div>
+                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="booking/flight">
+                      <div className='ms-1'>
+                        <h5 className='lh-1 fw-bold'>
+                          Request a Flight
+                        </h5>
+                        <p className='lh-1 fw-light'>Fly to anywhere around the world</p>
+                      </div>
+                    </a>
                   </div>
                   <div className='col-2'></div>
                 </div>
@@ -52,12 +56,14 @@ function QuickActions() {
                     <i className="fa-solid fa-people-line fa-xl mt-4" style={{ color: '#aaaab6' }}></i>
                   </div>
                   <div className='col-9'>
-                    <div className='ms-1'>
-                      <h5 className='lh-1 fw-bold'>
-                        Find a Buddy
-                      </h5>
-                      <p className='lh-1 fw-light'>Meet friends around you</p>
-                    </div>
+                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="buddy">
+                      <div className='ms-1'>
+                        <h5 className='lh-1 fw-bold'>
+                          Find a Buddy
+                        </h5>
+                        <p className='lh-1 fw-light'>Meet friends around you</p>
+                      </div>
+                    </a>
                   </div>
                   <div className='col-2'></div>
                 </div>
@@ -68,12 +74,14 @@ function QuickActions() {
                     <i className="fa-solid fa-circle-exclamation fa-xl mt-4" style={{ color: '#aaaab6' }}></i>
                   </div>
                   <div className='col-9'>
-                    <div className='ms-1'>
-                      <h5 className='lh-1 fw-bold'>
-                        Emergency
-                      </h5>
-                      <p className='lh-1 fw-light'>Request immediate help</p>
-                    </div>
+                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="#">
+                      <div className='ms-1'>
+                        <h5 className='lh-1 fw-bold'>
+                          Emergency
+                        </h5>
+                        <p className='lh-1 fw-light'>Request immediate help</p>
+                      </div>
+                    </a>
                   </div>
                   <div className='col-2'></div>
                 </div>

@@ -30,8 +30,8 @@ function TripData() {
           {/* <li className="list-group-item border-0 rounded-4" style={{background: '#0000000a' }}>
             <div className='mt-2 mb-2'>
               <div>
-              <h3 className='fw-bold'>4</h3>
-                <p>Trip Request</p>
+              <h3 className='fw-bold'>2</h3>
+                <p>Pending Trips</p>
               </div>
             </div>
           </li> */}
