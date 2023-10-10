@@ -49,9 +49,9 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
         "http://localhost:8080/api/user/login",
         userData
       );
-      console.log(response);
+      console.log("Response",response);
       const resData = await response.data;
-      console.log(resData);
+      console.log("Data",resData);
       localStorage.setItem("token", resData.token);
       const details = decodeJwt(resData.token)
       console.log(details?.sub)

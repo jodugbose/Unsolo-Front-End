@@ -8,8 +8,15 @@ import TripData from '../TripData/TripData'
 import QuickActions from '../QuickActions/QuickActions'
 import ActivityFeed from '../ActivityFeed/ActivityFeed'
 import BestDestinations from '../BestDestinations/BestDestinations'
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function DashBoardWindow() {
+  const navigate = useNavigate()
+  useEffect(() => {
+    const name = localStorage.getItem("name");
+    if(name == null) navigate("/")
+  },[])
   return (
     <div>
       <div className='container'>
