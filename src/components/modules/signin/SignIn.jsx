@@ -57,7 +57,7 @@ export default function SignIn({ closeModal, insideSignUpDialog }) {
       console.log(details?.sub)
       GetUserProfile(details?.sub)
 
-      navigate("/dashboard");
+      navigate("/homepage/dashboard");
     } catch (error) {
       if (error.response) {
         console.log(error.response);

@@ -36,7 +36,7 @@ const Chatbot = () => {
   const handleMessageItemClick = (message) => {
     if(message === 'Explore Packages') {
       console.log(message)
-      document.location.href='/#explore'
+      document.location.href='http://localhost:5173/#explore'
     }
     if(message === 'Hotel Booking'){
       console.log(message)
@@ -44,15 +44,15 @@ const Chatbot = () => {
     }
     if(message === 'Trip Booking'){
       console.log(message)
-      document.location.href='/trip'
+      document.location.href='/homepage/trip'
     }
     if(message === 'Flight Booking'){
       console.log(message)
-      document.location.href='/booking/flight'
+      document.location.href='/homepage/flight'
     }
-    if(message === 'Hotel Booking'){
+    if(message === 'Find Travel Buddy'){
       console.log(message)
-      document.location.href='/booking/hotel'
+      document.location.href='/homepage/buddy'
     }
     handleChatView()
   }

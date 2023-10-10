@@ -27,9 +27,9 @@ export default function BuddyForm({
   url,
   action,
   closeModal,
+  isTrip
 }) {
-  //useContext{}
-  const { travellerId, FetchTrips } = useTrip()
+  const { FetchTrips, FetchBuddies } = useTrip()
   const [loading, setLoading] = useState(false);
   const [destination, setDestination] = useState(null);
   const [departureDate, setDepartureDate] = useState(null);
@@ -39,19 +39,18 @@ export default function BuddyForm({
     budget: "",
     splitCost: "",
     journeyType: "",
-    aboutTheTrip:"",
-    firstTime:"",
+    aboutTheTrip: "",
+    firstTime: "",
   });
 
   const handleChange = (e) => {
     setBuddyData({ ...buddyData, [e.target.name]: e.target.value });
-    // console.log(buddyData);
   };
 
 
   const modifiedBuddyData = {
     ...buddyData,
-    travellerId: travellerId,
+    travellerId: localStorage.getItem("travellerId"),
     country: destination?.label,
     departureDate: departureDate?.format("DD/MM/YYYY"),
     arrivalDate: arrivalDate?.format("DD/MM/YYYY"),
@@ -66,9 +65,11 @@ export default function BuddyForm({
       console.log(response);
       const resData = await response.data;
       console.log(resData);
-      FetchTrips();
-      setBuddyData({})
-      // modifiedBuddyData = {}
+      if(isTrip) {
+        FetchTrips();
+      }else {
+        FetchBuddies(modifiedBuddyData)
+      }
 
     } catch (error) {
       if (error.response) {
@@ -145,45 +146,47 @@ export default function BuddyForm({
           )}
         />
 
-        <Stack direction="row" spacing={2}>
-          <Box>
-            <DatePicker
-              disablePast
-              label="Date from: "
-              value={departureDate}
-              onChange={(newValue) => {
-                setDepartureDate(newValue);
-              }}
-              slots={{ openPickerIcon: FlightTakeoff }}
-              slotProps={{
-                textField: {
-                  // helperText: "MM/DD/YYYY",
-                  size: "small",
-                  // required: true,
-                },
-                openPickerButton: { color: "primary" },
-              }}
-            />
-          </Box>
+        {isTrip &&
+          <Stack direction="row" spacing={2}>
+            <Box>
+              <DatePicker
+                disablePast
+                label="Date from: "
+                value={departureDate}
+                onChange={(newValue) => {
+                  setDepartureDate(newValue);
+                }}
+                slots={{ openPickerIcon: FlightTakeoff }}
+                slotProps={{
+                  textField: {
+                    // helperText: "MM/DD/YYYY",
+                    size: "small",
+                    // required: true,
+                  },
+                  openPickerButton: { color: "primary" },
+                }}
+              />
+            </Box>
 
-          <Box>
-            <DatePicker
-              disablePast
-              label="Date to: "
-              value={arrivalDate}
-              onChange={(newValue) => {
-                setArrivalDate(newValue);
-              }}
-              slots={{ openPickerIcon: FlightLand }}
-              slotProps={{
-                textField: {
-                  size: "small",
-                },
-                openPickerButton: { color: "primary" },
-              }}
-            />
-          </Box>
-        </Stack>
+            <Box>
+              <DatePicker
+                disablePast
+                label="Date to: "
+                value={arrivalDate}
+                onChange={(newValue) => {
+                  setArrivalDate(newValue);
+                }}
+                slots={{ openPickerIcon: FlightLand }}
+                slotProps={{
+                  textField: {
+                    size: "small",
+                  },
+                  openPickerButton: { color: "primary" },
+                }}
+              />
+            </Box>
+          </Stack>
+        }
         <TextField
           fullWidth
           select
@@ -199,14 +202,17 @@ export default function BuddyForm({
             </MenuItem>
           ))}
         </TextField>
-        <TextField
-          type="text"
-          label="About Trip"
-          name="aboutTheTrip"
-          value={buddyData.aboutTheTrip}
-          onChange={handleChange}
-        >
-        </TextField>
+        {
+          isTrip &&
+          <TextField
+            type="text"
+            label="About Trip"
+            name="aboutTheTrip"
+            value={buddyData.aboutTheTrip}
+            onChange={handleChange}
+          >
+          </TextField>
+        }
         {/* <TextField
           fullWidth
           select
@@ -219,42 +225,46 @@ export default function BuddyForm({
           <MenuItem value="male">Male</MenuItem>
           <MenuItem value="female">Female</MenuItem>
         </TextField> */}
-        <Stack direction="row" spacing={2}>
-          <TextField
-            fullWidth
-            type="number"
-            inputProps={{ min: 100 }}
-            size="small"
-            label="Budget"
-            name="budget"
-            value={buddyData.budget}
-            onChange={handleChange}
-          />
-          <TextField
-            fullWidth
-            select
-            size="small"
-            label="Split Cost?"
-            name="splitCost"
-            value={buddyData.splitCost}
-            onChange={handleChange}
-          >
-            <MenuItem value={true}>Yes</MenuItem>
-            <MenuItem value={false}>No</MenuItem>
-          </TextField>
-          <TextField
-            fullWidth
-            select
-            size="small"
-            label="First Time?"
-            name="firstTime"
-            value={buddyData.firstTime}
-            onChange={handleChange}
-          >
-            <MenuItem value={true}>Yes</MenuItem>
-            <MenuItem value={false}>No</MenuItem>
-          </TextField>
-        </Stack>
+        {
+          isTrip &&
+          <Stack direction="row" spacing={2}>
+            <TextField
+              fullWidth
+              type="number"
+              inputProps={{ min: 100 }}
+              size="small"
+              label="Budget"
+              name="budget"
+              value={buddyData.budget}
+              onChange={handleChange}
+            />
+            <TextField
+              fullWidth
+              select
+              size="small"
+              label="Split Cost?"
+              name="splitCost"
+              value={buddyData.splitCost}
+              onChange={handleChange}
+            >
+              <MenuItem value={true}>Yes</MenuItem>
+              <MenuItem value={false}>No</MenuItem>
+            </TextField>
+
+            <TextField
+              fullWidth
+              select
+              size="small"
+              label="First Time?"
+              name="firstTime"
+              value={buddyData.firstTime}
+              onChange={handleChange}
+            >
+              <MenuItem value={true}>Yes</MenuItem>
+              <MenuItem value={false}>No</MenuItem>
+            </TextField>
+          </Stack>
+        }
 
         <Box position="relative">
           <MyButton

@@ -4,9 +4,15 @@ import BuddyCard from "../components/modules/buddy/BuddyCard";
 import TripModal from "../components/modules/trip/TripModal";
 import MyButton from "../components/ui/MyButton";
 import useTrip from "../hooks/useTrip";
+import { useEffect } from "react";
 
 export default function Trip() {
-  const { trips } = useTrip()
+  const { trips, FetchTrips } = useTrip()
+
+  useEffect(() => {
+    FetchTrips()
+  }, [])
+
   return (
     <Box p={4}>
       <Header
@@ -18,6 +24,7 @@ export default function Trip() {
           subtitle="Invite fellow travellers that share your interests"
           url="http://localhost:8080/api/trip"
           action='create trip'
+          isTrip={true}
         >
           <MyButton>Book A Trip</MyButton>
         </TripModal>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Dialog } from "@mui/material";
 import BuddyForm from "../buddy/BuddyForm";
 
-export default function TripModal({ title, subtitle, url, action, children }) {
+export default function TripModal({ title, subtitle, url, action, isTrip, children }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
 
@@ -24,6 +24,7 @@ export default function TripModal({ title, subtitle, url, action, children }) {
           subtitle={subtitle}
           url={url}
           action={action}
+          isTrip={isTrip}
           closeModal={setOpen}
         />
       </Dialog>

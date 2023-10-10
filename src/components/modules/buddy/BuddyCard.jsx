@@ -21,20 +21,15 @@ function Item({ icon, name, value }) {
   );
 }
 
-export default function BuddyCard({trip, index, name}) {
-  const { aboutTheTrip,
-    arrivalDate,
+export default function BuddyCard({ trip, index, name }) {
+  const {
+    aboutTheTrip,
     budget,
     country,
-    departureDate,
-    firstTime,
-    id,
     journeyType,
     splitCost,
-    travellerId,
   } = trip
 
-  console.log("Trips", aboutTheTrip)
 
   return (
     <Stack
@@ -53,7 +48,7 @@ export default function BuddyCard({trip, index, name}) {
       <Stack>
         <Stack direction="row" alignItems="center">
           <Typography fontWeight={500} fontSize="140%" width="13rem">
-            { name }
+            {name}
           </Typography>
           <Stack direction="row" spacing={1}>
             <ExploreOutlined />
@@ -66,27 +61,21 @@ export default function BuddyCard({trip, index, name}) {
         </Typography>
 
         <Stack direction="row" flexWrap="wrap" width="26rem">
-          {/* <Item
-            icon={<AccountCircleOutlined color="primary" sx={{ mr: 0.5 }} />}
-            name="Looking For"
-            value="FEMALE"
-          /> */}
-
           <Item
             icon={<LabelOutlined color="primary" sx={{ mr: 0.5 }} />}
             name="Type of Journey"
-            value={`${splitCost ? "Yes" : "No"}`}
+            value={`${journeyType}`}
           />
-          <Item
-            icon={<PaymentsOutlined color="primary" sx={{ mr: 0.5 }} />}
-            name="Split cost"
-            value={`${splitCost ? "Yes" : "No"}`}
-          />
-          <Item
-            icon={<ReceiptLongOutlined color="primary" sx={{ mr: 0.5 }} />}
-            name="Budget"
-            value={`$${budget}`}
-          />
+            <Item
+              icon={<PaymentsOutlined color="primary" sx={{ mr: 0.5 }} />}
+              name="Split cost"
+              value={`${splitCost ? "Yes" : "No"}`}
+            />
+            <Item
+              icon={<ReceiptLongOutlined color="primary" sx={{ mr: 0.5 }} />}
+              name="Budget"
+              value={`$${budget}`}
+            />
         </Stack>
       </Stack>
     </Stack>

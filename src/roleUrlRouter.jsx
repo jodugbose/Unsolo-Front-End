@@ -35,18 +35,3 @@ export const isTokenValid = (token) => {
     return true
 
 }
-
-export const redirectToUserPage = (location, navigate, roles) => {
-    let from = location.state?.from?.pathname
-    
-    if(isTokenValid(localStorage.getItem("signature"))){
-        if(roles === "ADMIN" || roles === "SUPERADMIN")
-            from = location.state?.from?.pathname || "/admin"
-        else if(roles === "CUSTOMER")
-            from = location.state?.from?.pathname || "/shop"
-    }else {
-        from = location.state?.from?.pathname || "/login"
-    }
-
-    navigate(from, { replace: true })
-}

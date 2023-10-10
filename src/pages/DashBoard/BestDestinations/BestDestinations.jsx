@@ -9,14 +9,14 @@ function BestDestinations() {
           {/* <div className="card" style={{width: 18 + 'rem'}}> */}
           <div className="card">
             {/* <div className="card-header" style={{ height: 60 + 'px' }}> */}
-            <div className="card-header">
+            <div className="card-header" >
               <h4 className='fw-bold'>Best Destinations</h4>
               <p className='fw-light mt-0'>Find travel companions from your best locations</p>
             </div>
             <ul className="list-group list-group-flush">
 
               {/* <li className="list-group-item border-0 lh-1" style={{ height: 80 + 'px' }}> */}
-              <li className="list-group-item border-0 lh-1">
+              <li className="list-group-item border-0 lh-1" >
                 <div className='row'>
                   <div className='col-1 justify-content-center'>
                     <div className=''>
@@ -68,13 +68,13 @@ function BestDestinations() {
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
-                        <span>
+                        {/* <span>
                           <Avatar
                             alt="Remy Sharp"
                             src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
                           // sx={{ width: 80, height: 80 }}
                           />
-                        </span>
+                        </span> */}
                       </div>
 
                       <div>
@@ -84,12 +84,12 @@ function BestDestinations() {
                       </div>
                     </div>
                   </div>
-                  <div className='col-3'>
-                    <h2 className='mt-4'>₦1,200,000/trip</h2>
+                  <div className='col-2'>
+                    <h2 className='mt-4'>$1,200</h2>
                   </div>
                   <div className='col-1'>
                     <div className='mt-4'>
-                      <button type="button" className="btn btn-warning">View</button>
+                      <button type="button" className="btn btn-warning" >View</button>
                     </div>
                   </div>
                 </div>
@@ -164,8 +164,8 @@ function BestDestinations() {
                       </div>
                     </div>
                   </div>
-                  <div className='col-3'>
-                    <h2 className='mt-4'>₦900,000/trip</h2>
+                  <div className='col-2'>
+                  <h2 className='mt-4'>$900</h2>
                   </div>
                   <div className='col-1'>
                     <div className='mt-4'>
@@ -244,8 +244,8 @@ function BestDestinations() {
                       </div>
                     </div>
                   </div>
-                  <div className='col-3'>
-                    <h2 className='mt-4'>₦600,000/trip</h2>
+                  <div className='col-2'>
+                    <h2 className='mt-4'>$600</h2>
                   </div>
                   <div className='col-1'>
                     <div className='mt-4'>
@@ -324,8 +324,8 @@ function BestDestinations() {
                       </div>
                     </div>
                   </div>
-                  <div className='col-3'>
-                    <h2 className='mt-4'>₦1,100,000/trip</h2>
+                  <div className='col-2'>
+                    <h2 className='mt-4'>$1100</h2>
                   </div>
                   <div className='col-1'>
                     <div className='mt-4'>
