@@ -3,6 +3,16 @@ import Avatar from '@mui/material/Avatar';
 
 
 function QuickActions() {
+  const handleEmergency = async (e) => {
+    e.preventDefault();
+    const res = await fetch("http://localhost:8080/api/location/emergency-alert",{
+      method: "post",
+      headers: {
+        "Authorization": "Bearer "+localStorage.getItem("token")
+      }
+    })
+    console.log(res)
+  }
   return (
     <div>
       <div className="mt-1">
@@ -74,7 +84,7 @@ function QuickActions() {
                     <i className="fa-solid fa-circle-exclamation fa-xl mt-4" style={{ color: '#aaaab6' }}></i>
                   </div>
                   <div className='col-9'>
-                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="#">
+                    <a class="link-offset-2 link-underline link-underline-opacity-0 link-dark" href="#" onClick={handleEmergency}>
                       <div className='ms-1'>
                         <h5 className='lh-1 fw-bold'>
                           Emergency
