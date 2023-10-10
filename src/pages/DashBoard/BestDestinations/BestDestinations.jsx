@@ -46,32 +46,32 @@ function BestDestinations() {
                   </div>
                   <div className='col-3'>
                     <div className='justify-content-center mt-3'>
-                      <div className="hstack gap-0">
+                    <div className="hstack gap-0">
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBvAwikCoorgrzgsk8NjG__6YplxeP_yVcBqqwoaXlSzFL5tBOkCmHj632gThnaiwz17iqWK1y8mrgjvUL7olnn0P-w-g=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDU-pxtM325uxDMtc0qLE6FPCcK5ntnsIhVIkYPg3VxHD8U59WP8zavDlSwaoACVULXTndW8rx6cMBkROaAOBnDpJDM-Q=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAJ96UFwQrL_uBFjF_IJZtERvk8Xx7vWVUCKSRencg5vKCbmHqV_4Y6nwONoyusREPjN2LN8ep-Ga9nDMbue2TSf1W8Rg=s1600"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaADaWqoPRm7zfGJrtZbJ4zP0phtS6OAreyduKnq6F3EcXEy_lFAYSslJAz1P2adNIjbb2XtudhZ2zwqq5iEtr7b0xKZAQ=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
@@ -126,32 +126,32 @@ function BestDestinations() {
                   </div>
                   <div className='col-3'>
                     <div className='justify-content-center mt-3'>
-                      <div className="hstack gap-0">
+                    <div className="hstack gap-0">
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBvAwikCoorgrzgsk8NjG__6YplxeP_yVcBqqwoaXlSzFL5tBOkCmHj632gThnaiwz17iqWK1y8mrgjvUL7olnn0P-w-g=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDU-pxtM325uxDMtc0qLE6FPCcK5ntnsIhVIkYPg3VxHD8U59WP8zavDlSwaoACVULXTndW8rx6cMBkROaAOBnDpJDM-Q=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAJ96UFwQrL_uBFjF_IJZtERvk8Xx7vWVUCKSRencg5vKCbmHqV_4Y6nwONoyusREPjN2LN8ep-Ga9nDMbue2TSf1W8Rg=s1600"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaADaWqoPRm7zfGJrtZbJ4zP0phtS6OAreyduKnq6F3EcXEy_lFAYSslJAz1P2adNIjbb2XtudhZ2zwqq5iEtr7b0xKZAQ=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
@@ -206,32 +206,32 @@ function BestDestinations() {
                   </div>
                   <div className='col-3'>
                     <div className='justify-content-center mt-3'>
-                      <div className="hstack gap-0">
+                    <div className="hstack gap-0">
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBvAwikCoorgrzgsk8NjG__6YplxeP_yVcBqqwoaXlSzFL5tBOkCmHj632gThnaiwz17iqWK1y8mrgjvUL7olnn0P-w-g=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDU-pxtM325uxDMtc0qLE6FPCcK5ntnsIhVIkYPg3VxHD8U59WP8zavDlSwaoACVULXTndW8rx6cMBkROaAOBnDpJDM-Q=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAJ96UFwQrL_uBFjF_IJZtERvk8Xx7vWVUCKSRencg5vKCbmHqV_4Y6nwONoyusREPjN2LN8ep-Ga9nDMbue2TSf1W8Rg=s1600"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaADaWqoPRm7zfGJrtZbJ4zP0phtS6OAreyduKnq6F3EcXEy_lFAYSslJAz1P2adNIjbb2XtudhZ2zwqq5iEtr7b0xKZAQ=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
@@ -286,32 +286,32 @@ function BestDestinations() {
                   </div>
                   <div className='col-3'>
                     <div className='justify-content-center mt-3'>
-                      <div className="hstack gap-0">
+                    <div className="hstack gap-0">
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBvAwikCoorgrzgsk8NjG__6YplxeP_yVcBqqwoaXlSzFL5tBOkCmHj632gThnaiwz17iqWK1y8mrgjvUL7olnn0P-w-g=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDU-pxtM325uxDMtc0qLE6FPCcK5ntnsIhVIkYPg3VxHD8U59WP8zavDlSwaoACVULXTndW8rx6cMBkROaAOBnDpJDM-Q=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAJ96UFwQrL_uBFjF_IJZtERvk8Xx7vWVUCKSRencg5vKCbmHqV_4Y6nwONoyusREPjN2LN8ep-Ga9nDMbue2TSf1W8Rg=s1600"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>
                         <span>
                           <Avatar
                             alt="Remy Sharp"
-                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1e/9a/90/40/entrance-gate-to-motiongate.jpg?w=1200&h=1200&s=1"
+                            src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaADaWqoPRm7zfGJrtZbJ4zP0phtS6OAreyduKnq6F3EcXEy_lFAYSslJAz1P2adNIjbb2XtudhZ2zwqq5iEtr7b0xKZAQ=s2560"
                           // sx={{ width: 80, height: 80 }}
                           />
                         </span>

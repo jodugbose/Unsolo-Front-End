@@ -17,7 +17,7 @@ function UpcomingTrips() {
               <div className="carousel-caption d-none d-md-block">
                 <h2 className='fw-bold lh-1 d-flex align-items-start'>Upcoming Trips</h2>
                 <p className='fw-normal lh-1 d-flex align-items-start'>View upcoming trips that might interest you.</p>
-                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><h6>View Trips</h6></button>
+                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><a class="link-offset-2 link-underline link-underline-opacity-0 link-light" href="trip"><h6>View Trips</h6></a></button>
               </div>
             </div>
             <div className="carousel-item">
@@ -29,7 +29,7 @@ function UpcomingTrips() {
               <div className="carousel-caption d-none d-md-block">
                 <h2 className='fw-bold lh-1 d-flex align-items-start'>Mingle</h2>
                 <p className='fw-normal lh-1 d-flex align-items-start'>Connect with other travellers around the world.</p>
-                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><h6>Find Buddies</h6></button>
+                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><a class="link-offset-2 link-underline link-underline-opacity-0 link-light" href="buddy"><h6>Find Buddies</h6></a></button>
               </div>
             </div>
             <div className="carousel-item">
@@ -41,7 +41,7 @@ function UpcomingTrips() {
               <div className="carousel-caption d-none d-md-block">
                 <h2 className='fw-bold lh-1 d-flex align-items-start'>Reservations</h2>
                 <p className='fw-normal lh-1 d-flex align-items-start'>Travel around the globe with immense convenience.</p>
-                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><h6>See Bookings</h6></button>
+                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><a class="link-offset-2 link-underline link-underline-opacity-0 link-light" href="booking"><h6>See Bookings</h6></a></button>
               </div>
             </div>
           </div>

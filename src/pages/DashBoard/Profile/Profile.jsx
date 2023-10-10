@@ -7,12 +7,12 @@ function Profile() {
       <div className='d-flex justify-content-center'>
         <Avatar
           alt="Remy Sharp"
-          src="https://media.istockphoto.com/id/1309800132/photo/dubai-skyline-view-from-the-marasi-marina-in-city-business-bay-downtown-area-in-the-uae.jpg?s=2048x2048&w=is&k=20&c=V4BcklcU3AYCyeJcNkKOMzF1Qo-DK-AHlgmgOJ02VQE="
+          src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaANOO0M3rtyLlEk-Fww6wsm8jGh2UaJxsCvGFdB0OmUdUg8opKXKpL42JoTgK2_EFk6lndwacH4DH28COEateNvD4_l2Q=s2560"
           sx={{ width: 80, height: 80 }}
         />
       </div >
       <div className='d-flex justify-content-center mt-2'>
-      <h3>Mitchel Jones</h3>
+      <h3>Oluwaseun Kehinde</h3>
       </div>
       <div className='d-flex justify-content-center text-center'>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta rem sed architecto officiis veniam ducimus sequi vero rerum cupiditate, a, quas ad soluta voluptate. Ex eum pariatur consequatur corrupti ab?</p>
