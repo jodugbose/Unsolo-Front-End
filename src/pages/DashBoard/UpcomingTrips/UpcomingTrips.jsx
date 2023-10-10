@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function UpcomingTrips() {
   //style={{width: 50 + '%', height: 100 + 'px'}}

@@ -1,7 +1,10 @@
 import React from 'react'
 import { Avatar } from '@mui/material'
+import useTrip from '../../../hooks/useTrip'
 
 function Profile() {
+  const { displayName, description } = useTrip()
+
   return (
     <div>
       <div className='d-flex justify-content-center'>
@@ -12,10 +15,10 @@ function Profile() {
         />
       </div >
       <div className='d-flex justify-content-center mt-2'>
-      <h3>Oluwaseun Kehinde</h3>
+      <h3>{ displayName }</h3>
       </div>
       <div className='d-flex justify-content-center text-center'>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta rem sed architecto officiis veniam ducimus sequi vero rerum cupiditate, a, quas ad soluta voluptate. Ex eum pariatur consequatur corrupti ab?</p>
+        <p>{ description }</p>
       </div>
 
       <div className='d-flex justify-content-center'>
