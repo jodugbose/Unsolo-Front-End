@@ -2,7 +2,7 @@ import { Box, Button, Dialog, Modal, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import BuddyForm from "./BuddyForm";
 
-export default function BuddyModal({ title, subtitle, url, action, children }) {
+export default function BuddyModal({ title, subtitle, url, isTrip, action, children }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -28,6 +28,7 @@ export default function BuddyModal({ title, subtitle, url, action, children }) {
           subtitle={subtitle}
           url={url}
           action={action}
+          isTrip={isTrip}
           closeModal={setOpen}
         />
       </Dialog>

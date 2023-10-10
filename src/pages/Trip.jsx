@@ -3,8 +3,16 @@ import Header from "../components/modules/buddy/Header";
 import BuddyCard from "../components/modules/buddy/BuddyCard";
 import TripModal from "../components/modules/trip/TripModal";
 import MyButton from "../components/ui/MyButton";
+import useTrip from "../hooks/useTrip";
+import { useEffect } from "react";
 
 export default function Trip() {
+  const { trips, FetchTrips } = useTrip()
+
+  useEffect(() => {
+    FetchTrips()
+  }, [])
+
   return (
     <Box p={4}>
       <Header
@@ -14,16 +22,22 @@ export default function Trip() {
         <TripModal
           title="Create A Trip"
           subtitle="Invite fellow travellers that share your interests"
-          url="http://localhost:8080/api/user/trip"
+          url="http://localhost:8080/api/trip"
           action='create trip'
+          isTrip={true}
         >
-          <MyButton>Invite Traveler</MyButton>
+          <MyButton>Book A Trip</MyButton>
         </TripModal>
       </Header>
       <Stack direction="row" flexWrap="wrap">
-        <BuddyCard />
-        <BuddyCard />
-        <BuddyCard />
+        {
+          trips?.map((trip, index) => {
+            const name = localStorage.getItem("name")
+            return (
+              <BuddyCard trip={trip} key={index} name={name}/>
+            )
+          })
+        }
       </Stack>
     </Box>
   );

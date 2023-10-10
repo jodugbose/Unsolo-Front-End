@@ -34,9 +34,28 @@ const Chatbot = () => {
   };
 
   const handleMessageItemClick = (message) => {
-    console.log(message);
-    sendMessage(message);
-  };
+    if(message === 'Explore Packages') {
+      console.log(message)
+      document.location.href='http://localhost:5173/#explore'
+    }
+    if(message === 'Hotel Booking'){
+      console.log(message)
+      document.location.href='/booking/hotel'
+    }
+    if(message === 'Trip Booking'){
+      console.log(message)
+      document.location.href='/homepage/trip'
+    }
+    if(message === 'Flight Booking'){
+      console.log(message)
+      document.location.href='/homepage/flight'
+    }
+    if(message === 'Find Travel Buddy'){
+      console.log(message)
+      document.location.href='/homepage/buddy'
+    }
+    handleChatView()
+  }
 
   return (
     <section className="chat-bot-section">

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function UpcomingTrips() {
   //style={{width: 50 + '%', height: 100 + 'px'}}
@@ -17,7 +18,7 @@ function UpcomingTrips() {
               <div className="carousel-caption d-none d-md-block">
                 <h2 className='fw-bold lh-1 d-flex align-items-start'>Upcoming Trips</h2>
                 <p className='fw-normal lh-1 d-flex align-items-start'>View upcoming trips that might interest you.</p>
-                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><h6>View Trips</h6></button>
+                <button type="button" className="btn btn-outline-light mt-5 pb-0 d-flex align-items-start"><h6> <Link to="/homepage/trip" style={{textDecoration: 'none'}}>View Trips </Link></h6></button>
               </div>
             </div>
             <div className="carousel-item">
