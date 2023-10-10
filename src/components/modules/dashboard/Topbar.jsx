@@ -32,6 +32,8 @@ export default function Topbar() {
   function padTo2Digits(num) {
     return num.toString().padStart(2, '0');
   }
+
+  const loggedInUserFirstName= localStorage.getItem("firstName")
   const handleLogout = () => {
     localStorage.removeItem("name");
     localStorage.removeItem("travellerId");
@@ -53,7 +55,7 @@ export default function Topbar() {
           spacing={2}
         >
           <Typography variant="subtitle2" color="text.disabled">
-            Welcome, {displayName}
+            Welcome, {loggedInUserFirstName}
           </Typography>
           <Typography variant="subtitle2" color="text.disabled">
             { formatDate(new Date()) }
